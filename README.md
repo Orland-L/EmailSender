@@ -18,7 +18,7 @@ This is a C#/ASP.NET project for the Clarity Ventures' internal assignment. The 
 ## API
 The EmailSender API library contains the following 3 classes: 
 
-- `EmailSenderAPI.EmailSenderService`: The service class that can send emails synchronously and asynchronously. The two methods `SendMail(string recipient, string subject, string body)` and `SendMailAsync(string recipient, string subject, string body)` can be called from the application code. 
+- `EmailSenderAPI.EmailSenderService`: The service class that can send emails synchronously and asynchronously, using one of the two methods `public void SendMail(string recipient, string subject, string body)` and `public async Task SendMailAsync(string recipient, string subject, string body)`.
 - `EmailSenderAPI.EmailSenderCredential`: The configuration class that contains information for the SMTP server credentials. 
 - `EmailSenderAPI.EmailSendException`: The exception class whose instance may be thrown upon failure of email send. The API will retry up to a total of 3 times(including the initial attempt) before throwing exception. It can be caught and handled by the client code. 
 
