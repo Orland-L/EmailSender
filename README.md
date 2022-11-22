@@ -23,5 +23,11 @@ The EmailSender API library contains the following 3 classes:
 - EmailSenderAPI.EmailSendException: The exception class whose instance may be thrown upon failure of email send. The API will retry up to a total of 3 times(including the initial attempt) before throwing exception. It can be caught and handled by the client code. 
 
 
+## Web App
+The EmailSender Web application contains both an ASP.NET WEB API(REST) which can be called from postman/swagger/front-end, as well as an ASP.NET Web MVC sample front end which calls the API upon submitting the send email form. 
+
+To send an email using postman, simply enter the route /api/email(ie. https://localhost:7190/api/email) with Post method. Then select Body and Form Data, and click the blue Send button to complete the request, as shown in the screenshot below:
+![alt text](https://i.imgur.com/iEciJDp.png)
+
 ## Downloads/Installation
 Simply use Git clone or download the zip file from the master branch. The repo contains a solution file, you may simply open it with Visual Studio 2019/2022, and build the solution. Finally, you may debug the project EmailSenderWeb to see how the library/API work in action.
