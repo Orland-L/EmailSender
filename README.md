@@ -32,8 +32,16 @@ To send an email using postman, simply enter the route /api/email(ie. https://lo
 To send an email using the ASP.NET Web front end, just start the application and go to the route /Home/Email(ie. https://localhost:7190/Home/Email), and fill out a simple send email form as shown below:
 ![Send Email using Front end](https://i.imgur.com/vzKF8oV.png)
 
+
+## How to Use
+
+If you have visual studio with a microsoft windows operating system, it is possible to clone the project directly on Github with a web browser. Simply clicking the green Code button and select `Open with Visual Studio`. This will be able to pull the files automatically from Github, and create a solution based on the contents of the project. 
+
+![Use Github and Visual Studio](https://i.imgur.com/jkHXdJf.png)
+
+
+You may download the zip version of the files and uncompress the archive, or use the command command `gh repo clone Orland-L/EmailSender` to pull the repo into your local machine. At this point, just clicking on the 'Debug' button in visual studio for the Web project and you will be able to start the local web server. At this point, it is possible to run postman client or use the email send form directly on the browser to send emails. 
+
+Alternatively, on non-windows based operating system it is possible to build and debug the project using Visual Studio Code with .NET Core SDK installed. I use windows operating system myself so I have not tested this myself, please let me know if there is any issue if you need to build the solution in unconventional ways. 
+
 **Note**: In order to use/test the API and web application, it is necessary to specify the values `Host`, `Email` and `Password` fields in appsettings.json, section `EmailSettings`. Otherwise, the email server will fail authentication and emails will not be sent.  
-
-
-## Downloads/Installation
-Simply use Git clone or download the zip file from the master branch. The repo contains a solution file, you may simply open it with Visual Studio 2019/2022, and build the solution. Finally, you may debug the project EmailSenderWeb to see how the library/API work in action.
