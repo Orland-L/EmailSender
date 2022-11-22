@@ -27,10 +27,10 @@ The EmailSender API library contains the following 3 classes:
 The EmailSender Web application contains both an ASP.NET WEB API(REST) which can be called from postman/swagger/front-end, as well as an ASP.NET Web MVC sample front end which calls the API upon submitting the send email form. 
 
 To send an email using postman, simply enter the route /api/email(ie. https://localhost:7190/api/email) with Post method. Then select Body and Form Data, and click the blue Send button to complete the request, as shown in the screenshot below:
-!Send Email using Postman](https://i.imgur.com/iEciJDp.png)
+![Send Email using Postman](https://i.imgur.com/iEciJDp.png)
 
 To send an email using the ASP.NET Web front end, just start the application and go to the route /Home/Email(ie. https://localhost:7190/Home/Email), and fill out a simple send email form as shown below:
-!Send Email using Front end](https://i.imgur.com/vzKF8oV.png)
+![Send Email using Front end](https://i.imgur.com/vzKF8oV.png)
 
 ## Downloads/Installation
 Simply use Git clone or download the zip file from the master branch. The repo contains a solution file, you may simply open it with Visual Studio 2019/2022, and build the solution. Finally, you may debug the project EmailSenderWeb to see how the library/API work in action.
