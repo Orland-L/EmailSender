@@ -24,6 +24,10 @@ namespace EmailSenderWeb.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromForm] EmailSendFormModel emailSendForm)
         {
+            if (string.IsNullOrEmpty(_credential.Host) || string.IsNullOrEmpty(_credential.Email) || string.IsNullOrEmpty(_credential.Password))
+            {
+                return Unauthorized();
+            }
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

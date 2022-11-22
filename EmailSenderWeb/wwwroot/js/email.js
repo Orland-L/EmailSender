@@ -9,10 +9,12 @@
             body: new FormData(this)
         })
             .then(res => {
-                if (res.status !== 200) {
-                    throw new Error(res.status === 400
-                        ? "Form data is invalid, please make sure the fields recipient, subject and body are entered properly."
-                        : "Internal Server Error, please try again or check the email log file if the issue persists."); 
+                switch (res.status) {
+                    case 200: break;
+                    case 400: throw new Error("Form data is invalid, please make sure the fields recipient, subject and body are entered properly.");
+                    case 401: throw new Error("Authentication failed, please check the appsettings to see if email server information has been entered correctly.");
+                    case 408: throw new Error("Request Timeout, please try again later to see if the network connection issue persists.");
+                    default: throw new Error("Internal Server Error, please try again or check the email log file if the issue persists.");
                 }
             }).then(data => {
                 note.className = "alert alert-success fade show";
