@@ -33,7 +33,7 @@ To send an email using the ASP.NET Web front end, just start the application and
 ![Send Email using Front end](https://i.imgur.com/vzKF8oV.png)
 
 
-## How to Use
+## Build and Use
 
 If you have visual studio with a microsoft windows operating system, it is possible to clone the project directly on Github with a web browser. Simply clicking the green Code button and select `Open with Visual Studio`. This will be able to pull the files automatically from Github, and create a solution based on the contents of the project. 
 
