@@ -32,5 +32,8 @@ To send an email using postman, simply enter the route /api/email(ie. https://lo
 To send an email using the ASP.NET Web front end, just start the application and go to the route /Home/Email(ie. https://localhost:7190/Home/Email), and fill out a simple send email form as shown below:
 ![Send Email using Front end](https://i.imgur.com/vzKF8oV.png)
 
+**Note**: In order to use/test the API and web application, it is necessary to specify the values `Host`, `Email` and `Password` fields in appsettings.json, section `EmailSettings`. Otherwise, the email server will fail authentication and emails will not be sent.  
+
+
 ## Downloads/Installation
 Simply use Git clone or download the zip file from the master branch. The repo contains a solution file, you may simply open it with Visual Studio 2019/2022, and build the solution. Finally, you may debug the project EmailSenderWeb to see how the library/API work in action.
